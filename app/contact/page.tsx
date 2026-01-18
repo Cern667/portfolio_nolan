@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Mail, Github, Linkedin, Instagram, Send, CheckCircle } from "lucide-react";
+import { Mail, Github, Linkedin, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Contact() {
@@ -98,25 +98,19 @@ export default function Contact() {
                 <SocialButton
                   icon={<Linkedin />}
                   label="LinkedIn"
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/nolan-pujol-a6ab502aa/"
                   color="bg-primary-kaliRed"
                 />
                 <SocialButton
                   icon={<Github />}
                   label="GitHub"
-                  href="https://github.com"
+                  href="https://github.com/Cern667"
                   color="bg-primary-gray"
                 />
                 <SocialButton
-                  icon={<Instagram />}
-                  label="Instagram"
-                  href="https://instagram.com"
-                  color="bg-primary-burgundy"
-                />
-                <SocialButton
                   icon={<Mail />}
-                  label="nolan@example.com"
-                  href="mailto:nolan@example.com"
+                  label="nolan.pujol@etu.umontpellier.fr"
+                  href="mailto:nolan.pujol@etu.umontpellier.fr"
                   color="bg-primary-redDark"
                 />
               </div>

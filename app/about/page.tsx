@@ -2,18 +2,19 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Code2, Shield, Wifi, Database, Terminal, GitBranch } from "lucide-react";
+import { Code2, Shield, Wifi, Database, Terminal, GitBranch, Cloud } from "lucide-react";
 
 const skills = [
-  { name: "HTML 5 / CSS 3", level: 90, icon: Code2 },
-  { name: "Java 18-22", level: 80, icon: Code2 },
-  { name: "PHP / SQL", level: 80, icon: Database },
-  { name: "Python", level: 65, icon: Code2 },
-  { name: "GNS3", level: 70, icon: Wifi },
-  { name: "JavaScript", level: 70, icon: Code2 },
+  { name: "Cybersécurité", level: 85, icon: Shield },
   { name: "Git & Versionning", level: 85, icon: GitBranch },
+  { name: "Ansible", level: 80, icon: Terminal },
+  { name: "Terraform", level: 80, icon: Cloud },
+  { name: "Python", level: 65, icon: Code2 },
+  { name: "Java 18-22", level: 60, icon: Code2 },
+  { name: "HTML 5 / CSS 3", level: 60, icon: Code2 },
+  { name: "PHP / SQL", level: 60, icon: Database },
+  { name: "JavaScript", level: 60, icon: Code2 },
   { name: "Wireshark, BurpSuite", level: 80, icon: Shield },
-  { name: "Cybersécurité", level: 75, icon: Terminal },
 ];
 
 export default function About() {
@@ -43,67 +44,34 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="relative w-48 h-48 mx-auto lg:mx-0 mb-8">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-kaliRed to-primary-burgundy rounded-full blur-xl opacity-30" />
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary-kaliRed shadow-glow-red">
-                <Image
-                  src="/images/hacker.jpg"
-                  alt="Nolan Pujol"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-primary-white">
-              Bienvenue sur mon portfolio !
+            <h2 className="text-3xl font-bold text-primary-white mb-8">
+              Mon Parcours
             </h2>
 
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Je suis actuellement en <strong className="text-primary-kaliRed">2ème année de BUT Informatique</strong> à
-                l&apos;IUT de Montpellier-Sète, spécialisé en{" "}
-                <strong className="text-primary-kaliRed">
-                  développement d&apos;applications communicantes et sécurisées
-                </strong>
-                .
+                Actuellement en <strong className="text-primary-kaliRed">3ème année de BUT Informatique</strong> à
+                l&apos;IUT de Montpellier-Sète, je me spécialise dans le développement d&apos;applications communicantes et sécurisées.
               </p>
 
               <p>
-                Passionné par la{" "}
-                <strong className="text-primary-kaliRed">programmation</strong>, je
-                maîtrise plusieurs langages comme{" "}
-                <strong>Java, Python, PHP et SQL</strong>. Mon véritable intérêt
-                réside dans la{" "}
-                <strong className="text-primary-kaliRed">cybersécurité</strong>.
+                🎯 <strong className="text-primary-white">Mon cap : La Cybersécurité & le DevOps</strong><br />
+                Si mon objectif principal est de devenir <strong className="text-primary-kaliRed">Pentester</strong>, je suis convaincu que la sécurité moderne passe par la maîtrise de l&apos;infrastructure. C&apos;est pourquoi je m&apos;oriente vers un profil <strong className="text-primary-kaliRed">DevSecOps</strong> : depuis cette année, je me forme intensivement aux outils de déploiement comme <strong>Ansible</strong> et <strong>Terraform</strong>. J&apos;ai d&apos;ailleurs décroché mon stage de fin d&apos;études chez <strong className="text-primary-kaliRed">Engie</strong> (avril 2026), une opportunité en or pour mettre ces compétences à l&apos;épreuve du réel.
               </p>
 
               <p>
-                J&apos;adore participer à des{" "}
-                <strong className="text-primary-kaliRed">CTF</strong> sur des plateformes
-                comme <strong>TryHackMe</strong>, où j&apos;ai développé des
-                compétences en{" "}
-                <strong className="text-primary-kaliRed">pentesting</strong> et en
-                analyse de vulnérabilités.
+                🛠️ <strong className="text-primary-white">Touche-à-tout et Proactif</strong><br />
+                Avant de plonger dans le monde professionnel, ma philosophie est simple : explorer sans limite. Je réalise de nombreux projets d&apos;applications variés pour comprendre un maximum de technologies. Cette curiosité me permet d&apos;avoir une vision globale, indispensable pour identifier des vulnérabilités lors de mes sessions de Pentesting et de CTF.
               </p>
 
               <p>
-                En dehors de l&apos;informatique, je pratique le{" "}
-                <strong>handball et le padel</strong>, et je suis passionné de{" "}
-                <strong>musique</strong>. Je joue du piano depuis plusieurs années
-                et j&apos;ai récemment commencé la{" "}
-                <strong>production musicale</strong>.
+                🎓 <strong className="text-primary-white">Et demain ?</strong><br />
+                Pour la rentrée prochaine, j&apos;aspire à intégrer le <strong className="text-primary-kaliRed">Master Cybersécurité du CNAM</strong> ou la filière <strong className="text-primary-kaliRed">DevOps de Polytech</strong>. Mon but idéal : poursuivre en alternance, possiblement au sein de ma structure d&apos;accueil actuelle si l&apos;expérience est concluante.
               </p>
 
-              <p className="text-primary-kaliRed font-semibold text-lg">
-                Mon objectif : devenir pentester professionnel.
-              </p>
-
-              <p className="bg-primary-kaliRed/10 border border-primary-kaliRed rounded-lg p-4 shadow-glow-red">
-                🔍 Actuellement à la recherche d&apos;une{" "}
-                <strong className="text-primary-kaliRed">alternance</strong> à partir
-                de <strong>septembre 2025</strong> en cybersécurité ou
-                développement sécurisé.
+              <p>
+                🎹 <strong className="text-primary-white">Équilibre & Engagement</strong><br />
+                Au-delà du code, je suis très investi dans la vie culturelle. Je suis membre du service culturel du <strong className="text-primary-kaliRed">CROUS</strong> (groupe musique) où je joue du piano. Je participe régulièrement à des projets musicaux avec des amis, une passion qui stimule ma créativité et mon écoute. Côté sport, je pratique le <strong>handball</strong> et le <strong>padel</strong>, deux disciplines qui entretiennent mon goût du challenge et de l&apos;esprit d&apos;équipe.
               </p>
             </div>
           </motion.div>

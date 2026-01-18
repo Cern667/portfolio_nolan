@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Download, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Download, Github, Linkedin, Mail, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -48,7 +48,7 @@ export default function Home() {
               transition={{ delay: 0.6 }}
               className="text-xl md:text-2xl text-gray-300 font-poppins"
             >
-              Étudiant en informatique, spécialité développement
+              Étudiant en 3ème année de BUT Informatique, spécialité développement
               d&apos;applications communicantes et sécurisées
             </motion.p>
 
@@ -63,9 +63,9 @@ export default function Home() {
                 size="lg"
                 className="bg-primary-kaliRed hover:bg-primary-redDark text-white shadow-glow-red"
               >
-                <Link href="/cv.pdf" download>
+                <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-5 w-5" />
-                  Télécharger CV
+                  Voir mon CV
                 </Link>
               </Button>
               <Button
@@ -85,10 +85,10 @@ export default function Home() {
               transition={{ delay: 1 }}
               className="flex gap-4 pt-8"
             >
-              <SocialLink href="https://linkedin.com" icon={<Linkedin />} />
-              <SocialLink href="https://github.com" icon={<Github />} />
-              <SocialLink href="https://twitter.com" icon={<Twitter />} />
-              <SocialLink href="mailto:nolan@example.com" icon={<Mail />} />
+              <SocialLink href="https://www.linkedin.com/in/nolan-pujol-a6ab502aa/" icon={<Linkedin />} />
+              <SocialLink href="https://github.com/Cern667" icon={<Github />} />
+              <SocialLink href="https://tryhackme.com/p/cernpentesthelsing" icon={<Terminal />} />
+              <SocialLink href="mailto:nolan.pujol@etu.umontpellier.fr" icon={<Mail />} />
             </motion.div>
           </motion.div>
 

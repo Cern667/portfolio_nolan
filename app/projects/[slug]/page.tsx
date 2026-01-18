@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getProjectBySlug, getAllProjects } from "@/data/projects";
-import { ArrowLeft, Calendar, Clock, Users } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Users, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CompetencesDisplay from "@/components/CompetencesDisplay";
 import ImageSlider from "@/components/ImageSlider";
@@ -40,11 +40,10 @@ export default function ProjectDetail({
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
             <span
-              className={`px-4 py-1 rounded-full text-sm font-semibold ${
-                project.category === "perso"
-                  ? "bg-primary-kaliRed/20 text-primary-kaliRed border border-primary-kaliRed shadow-glow-red"
-                  : "bg-primary-burgundy/20 text-primary-burgundy border border-primary-burgundy"
-              }`}
+              className={`px-4 py-1 rounded-full text-sm font-semibold ${project.category === "perso"
+                ? "bg-primary-kaliRed/20 text-primary-kaliRed border border-primary-kaliRed shadow-glow-red"
+                : "bg-primary-burgundy/20 text-primary-burgundy border border-primary-burgundy"
+                }`}
             >
               {project.category === "perso" ? "Projet Personnel" : "Projet IUT"}
             </span>
@@ -136,6 +135,21 @@ export default function ProjectDetail({
                 <DetailRow label="Période" value={project.dates} />
               </div>
             </div>
+
+            {/* Source Code Buttons */}
+            {project.sources && project.sources.map((source, index) => (
+              <Button
+                key={index}
+                asChild
+                variant="outline"
+                className="w-full border-gray-700 hover:bg-gray-800 text-primary-white gap-2"
+              >
+                <Link href={source.url} target="_blank" rel="noopener noreferrer">
+                  <Github className="w-4 h-4" />
+                  {source.label}
+                </Link>
+              </Button>
+            ))}
 
             {/* CTA */}
             <div className="bg-gradient-to-br from-primary-kaliRed/20 to-primary-burgundy/20 rounded-xl p-6 border border-primary-kaliRed/30 hover:shadow-glow-red transition-shadow duration-300">
