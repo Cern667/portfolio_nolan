@@ -295,7 +295,7 @@ export const projects: Project[] = [
         title: "Architecture DevSecOps & Self-Hosting : Infrastructure Zero-Trust",
         slug: "infra-auth-devops",
         category: "iut",
-        dates: "Septembre 2024 - Janvier 2025",
+        dates: "Septembre 2025 - Janvier 2026",
         duration: "3 mois",
         team: "Équipe de 3 personnes",
         description:
@@ -306,12 +306,12 @@ export const projects: Project[] = [
         • Orchestration & Routage : Traefik Reverse Proxy dynamique avec TLS Wildcard.
         • IAM : SSO centralisé via Keycloak et OpenLDAP.
         • Sécurité : Infrastructure "Code-First" (IaC) et isolation des flux.`,
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+        image: "/images/devops/traefik.png",
         images: [
+            "/images/devops/traefik.png",
+            "/images/devops/sftpgo.png",
             "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-            "https://images.unsplash.com/photo-1667372393119-c85c020889f1?w=800&q=80",
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
-            "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&q=80"
+            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
         ],
         technologies: [
             "Docker Compose",
