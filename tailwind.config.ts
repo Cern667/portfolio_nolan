@@ -10,16 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          // Noir - Base (Kali Linux style)
-          black: "#0a0a0a",
-          darkest: "#050505",
-          darker: "#0f0f0f",
-          dark: "#1a1a1a",
+          // Noir - Base (Terminal style)
+          black: "#131313",
+          darkest: "#0e0e0e",
+          darker: "#1c1b1b",
+          dark: "#201f1f",
 
           // Gris - Éléments
           gray: "#2a2a2a",
-          grayMedium: "#363636",
-          grayLight: "#3a3a3a",
+          grayMedium: "#353534",
+          grayLight: "#3a3939",
           grayLighter: "#4a4a4a",
           grayBorder: "#2d2d2d",
 
@@ -64,6 +64,7 @@ const config: Config = {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        headline: ["var(--font-space)", "sans-serif"],
         mono: ["JetBrains Mono", "Fira Code", "monospace"],
       },
       boxShadow: {

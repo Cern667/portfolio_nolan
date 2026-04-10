@@ -1,261 +1,184 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { Mail, Link as LinkIcon, Terminal, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { Mail, Github, Linkedin, Send, CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ firstName: "", lastName: "", email: "", message: "" });
-    }, 3000);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
-    <div className="min-h-screen bg-primary-black pt-24 pb-16">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary-kaliRed to-primary-burgundy bg-clip-text text-transparent">
-            Contactez-moi
-          </h1>
-          <p className="text-xl text-gray-400">
-            Une question ? Un projet ? N&apos;hésitez pas à me contacter
-          </p>
-        </motion.div>
+    <div className="min-h-screen bg-primary-black text-primary-white flex flex-col pt-24">
+      <main className="flex-grow max-w-screen-xl mx-auto px-6 py-12 md:py-24 w-full">
+        {/* Hero Section / Editorial Header */}
+        <section className="mb-20 ml-0 md:ml-20 max-w-3xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
+          >
+            Établir une <span className="text-primary-kaliRed">connexion</span> sécurisée.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-gray-400 text-lg md:text-xl max-w-2xl font-light leading-relaxed"
+          >
+            Vous avez un projet d&apos;infrastructure, un besoin d&apos;audit de sécurité ou une architecture CI/CD à automatiser ? Le canal est ouvert.
+          </motion.p>
+        </section>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Left side - Profile & Social */}
+        {/* Main Content: Form & Info Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+          {/* Contact Form Section (Left 7/12) */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8"
+            className="lg:col-span-7 bg-primary-gray p-8 md:p-12 rounded-lg border border-primary-grayBorder group relative focus-within:border-primary-kaliRed/50 transition-colors duration-500"
           >
-            {/* Profile Card */}
-            <div className="bg-primary-gray rounded-2xl p-8 border border-primary-grayBorder hover:border-primary-kaliRed transition-colors duration-300">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="relative w-32 h-32">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-kaliRed to-primary-burgundy rounded-full blur-xl opacity-30" />
-                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary-kaliRed shadow-glow-red">
-                    <Image
-                      src="/images/hacker.jpg"
-                      alt="Nolan Pujol"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-kaliRed/20 to-transparent group-focus-within:via-primary-kaliRed/50 transition-all duration-500" />
+            <form className="space-y-8" action="https://formspree.io/f/mqakeowb" method="POST">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label className="block text-xs uppercase tracking-widest text-gray-400 ml-1">First Name</label>
+                  <input
+                    name="firstname"
+                    className="w-full bg-primary-black/50 border-none border-b border-primary-grayBorder/50 text-primary-white placeholder:text-gray-600 px-4 py-4 rounded-lg focus:ring-0 focus:border-primary-kaliRed transition-all"
+                    placeholder="John"
+                    type="text"
+                    required
+                  />
                 </div>
+                <div className="space-y-2">
+                  <label className="block text-xs uppercase tracking-widest text-gray-400 ml-1">Last Name</label>
+                  <input
+                    name="lastname"
+                    className="w-full bg-primary-black/50 border-none border-b border-primary-grayBorder/50 text-primary-white placeholder:text-gray-600 px-4 py-4 rounded-lg focus:ring-0 focus:border-primary-kaliRed transition-all"
+                    placeholder="Doe"
+                    type="text"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label className="block text-xs uppercase tracking-widest text-gray-400 ml-1">Email</label>
+                <input
+                  name="email"
+                  className="w-full bg-primary-black/50 border-none border-b border-primary-grayBorder/50 text-primary-white placeholder:text-gray-600 px-4 py-4 rounded-lg focus:ring-0 focus:border-primary-kaliRed transition-all"
+                  placeholder="john.doe@secure-cloud.com"
+                  type="email"
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="block text-xs uppercase tracking-widest text-gray-400 ml-1">Message</label>
+                <textarea
+                  name="message"
+                  className="w-full bg-primary-black/50 border-none border-b border-primary-grayBorder/50 text-primary-white placeholder:text-gray-600 px-4 py-4 rounded-lg focus:ring-0 focus:border-primary-kaliRed transition-all resize-none"
+                  placeholder="Décrivez votre besoin technique ou votre projet..."
+                  rows={5}
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full md:w-auto px-10 py-4 bg-primary-kaliRed text-white font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-primary-red transition-all active:scale-95 shadow-glow-kali border border-primary-kaliRed"
+              >
+                Initialiser la Transmission
+              </button>
+            </form>
+          </motion.div>
 
+          {/* Side Cards Section (Right 5/12) */}
+          <div className="lg:col-span-5 space-y-8">
+            {/* Direct Contact Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-primary-gray p-8 rounded-lg border border-primary-grayBorder group hover:bg-primary-gray/80 transition-all duration-300 relative overflow-hidden"
+            >
+              <div className="absolute inset-y-0 left-0 w-1 bg-primary-kaliRed opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-primary-kaliRed/10 rounded-lg text-primary-kaliRed">
+                  <Mail className="w-6 h-6" />
+                </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-primary-white">
-                    Nolan Pujol
-                  </h2>
-                  <p className="text-gray-400 mt-2">
-                    Étudiant en informatique
-                  </p>
+                  <h3 className="font-bold text-xl mb-1 text-primary-white">Email Direct</h3>
+                  <p className="text-gray-400 text-sm mb-4">Temps de réponse moyen : &lt; 24h</p>
+                  <a
+                    className="text-primary-kaliRed font-mono text-lg hover:underline decoration-primary-kaliRed/30 underline-offset-4"
+                    href="mailto:nolan.pujol@etu.umontpellier.fr"
+                  >
+                    nolan.pujol@etu.umontpellier.fr
+                  </a>
                 </div>
-
-                <p className="text-gray-300">
-                  Bonjour, merci de visiter mon site. N&apos;hésitez pas à me
-                  contacter pour discuter de cybersécurité, développement ou
-                  opportunités professionnelles !
-                </p>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Social Links */}
-            <div className="bg-primary-gray rounded-2xl p-8 border border-primary-grayBorder hover:border-primary-kaliRed transition-colors duration-300">
-              <h3 className="text-xl font-bold text-primary-white mb-6">
-                Réseaux sociaux
-              </h3>
-              <div className="space-y-4">
-                <SocialButton
-                  icon={<Linkedin />}
-                  label="LinkedIn"
-                  href="https://www.linkedin.com/in/nolan-pujol-a6ab502aa/"
-                  color="bg-primary-kaliRed"
-                />
-                <SocialButton
-                  icon={<Github />}
-                  label="GitHub"
-                  href="https://github.com/Cern667"
-                  color="bg-primary-gray"
-                />
-                <SocialButton
-                  icon={<Mail />}
-                  label="nolan.pujol@etu.umontpellier.fr"
-                  href="mailto:nolan.pujol@etu.umontpellier.fr"
-                  color="bg-primary-redDark"
-                />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right side - Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <div className="bg-primary-gray rounded-2xl p-8 border border-primary-grayBorder hover:border-primary-kaliRed transition-colors duration-300">
-              <h3 className="text-2xl font-bold text-primary-white mb-6">
-                Envoyez-moi un message
-              </h3>
-
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center justify-center py-12 space-y-4"
-                >
-                  <CheckCircle className="w-16 h-16 text-primary-green" />
-                  <h4 className="text-xl font-semibold text-primary-white">
-                    Message envoyé !
-                  </h4>
-                  <p className="text-gray-400 text-center">
-                    Merci pour votre message. Je vous répondrai dans les plus
-                    brefs délais.
-                  </p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label
-                        htmlFor="firstName"
-                        className="block text-sm font-medium text-gray-300 mb-2"
-                      >
-                        Prénom
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-primary-black border border-primary-grayBorder rounded-lg text-white focus:border-primary-kaliRed focus:ring-2 focus:ring-primary-kaliRed/20 outline-none transition-all"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="lastName"
-                        className="block text-sm font-medium text-gray-300 mb-2"
-                      >
-                        Nom
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-primary-black border border-primary-grayBorder rounded-lg text-white focus:border-primary-kaliRed focus:ring-2 focus:ring-primary-kaliRed/20 outline-none transition-all"
-                      />
-                    </div>
+            {/* Social Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+              {/* LinkedIn Card */}
+              <motion.a
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                href="https://linkedin.com/in/nolan-pujol"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-primary-gray p-6 rounded-lg border border-primary-grayBorder hover:scale-[1.02] hover:border-primary-kaliRed/50 transition-all group"
+              >
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-4">
+                    <LinkIcon className="w-5 h-5 text-primary-kaliRed" />
+                    <span className="font-medium text-primary-white">LinkedIn</span>
                   </div>
+                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-primary-kaliRed group-hover:translate-x-1 transition-all" />
+                </div>
+              </motion.a>
 
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-primary-black border border-gray-700 rounded-lg text-white focus:border-primary-blue focus:ring-2 focus:ring-primary-blue/20 outline-none transition-all"
-                    />
+              {/* GitHub Card */}
+              <motion.a
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                href="https://github.com/Cern667"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-primary-gray p-6 rounded-lg border border-primary-grayBorder hover:scale-[1.02] hover:border-primary-kaliRed/50 transition-all group"
+              >
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-4">
+                    <Terminal className="w-5 h-5 text-primary-kaliRed" />
+                    <span className="font-medium text-primary-white">GitHub</span>
                   </div>
+                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-primary-kaliRed group-hover:translate-x-1 transition-all" />
+                </div>
+              </motion.a>
 
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 bg-primary-black border border-primary-grayBorder rounded-lg text-white focus:border-primary-kaliRed focus:ring-2 focus:ring-primary-kaliRed/20 outline-none transition-all resize-none"
-                    />
+              {/* TryHackMe Card */}
+              <motion.a
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                href="https://tryhackme.com/p/cernpentesthelsing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-primary-gray p-6 rounded-lg border border-primary-grayBorder hover:scale-[1.02] hover:border-primary-kaliRed/50 transition-all group"
+              >
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-4">
+                    <Terminal className="w-5 h-5 text-primary-kaliRed" />
+                    <span className="font-medium text-primary-white">TryHackMe</span>
                   </div>
-
-                  <Button type="submit" size="lg" className="w-full bg-primary-kaliRed hover:bg-primary-redDark shadow-glow-red">
-                    <Send className="mr-2 h-5 w-5" />
-                    Envoyer le message
-                  </Button>
-                </form>
-              )}
+                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-primary-kaliRed group-hover:translate-x-1 transition-all" />
+                </div>
+              </motion.a>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
-  );
-}
-
-function SocialButton({
-  icon,
-  label,
-  href,
-  color,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  href: string;
-  color: string;
-}) {
-  return (
-    <motion.a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className={`flex items-center gap-4 px-6 py-4 ${color} rounded-xl text-white font-medium hover:shadow-glow-red transition-all border border-primary-grayBorder hover:border-primary-kaliRed`}
-    >
-      <div className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg">
-        {icon}
-      </div>
-      <span>{label}</span>
-    </motion.a>
   );
 }

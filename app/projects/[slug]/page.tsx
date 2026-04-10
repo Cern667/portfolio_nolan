@@ -115,9 +115,12 @@ export default function ProjectDetail({
             </div>
 
             {/* Competences */}
-            {project.competences && project.competences.length > 0 && (
-              <CompetencesDisplay competences={project.competences} />
-            )}
+            {(project.competencesNiveau2?.length || project.competencesNiveau3?.length) ? (
+              <CompetencesDisplay
+                competencesNiveau2={project.competencesNiveau2}
+                competencesNiveau3={project.competencesNiveau3}
+              />
+            ) : null}
           </div>
 
           {/* Sidebar */}
