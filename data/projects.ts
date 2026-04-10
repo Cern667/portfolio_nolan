@@ -82,6 +82,9 @@ export const projects: Project[] = [
                     { code: "AC36.03", level: "acquis", details: "Conduite du changement pour les utilisateurs (passage d'une gestion libre à un domaine contrôlé)." }
                 ]
             }
+        ],
+        sources: [
+            { label: "Projet Confidentiel (Pas de lien public)", url: "#" }
         ]
     },
 
@@ -100,7 +103,7 @@ export const projects: Project[] = [
         description: "Déploiement d'une infrastructure de stockage de fichiers à distance pour une école, axée sur la haute disponibilité.\n\nMise en place d'un réseau privé via Tailscale pour un accès distant sécurisé. Un serveur principal et un serveur relais (sous Ubuntu, avec plusieurs To de stockage) sont synchronisés en temps réel via Syncthing. Côté client, un script Batch (.bat) configuré au démarrage vérifie la disponibilité du serveur principal. Si celui-ci est inaccessible, le script monte dynamiquement le lecteur réseau (Z:) sur le serveur relais, offrant un basculement transparent pour les utilisateurs sans perte de données ni changement d'habitudes.",
         image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
         images: [
-            "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+            "/images/serverStockage/sync.png",
             "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&q=80"
         ],
         technologies: ["Ubuntu Server", "Tailscale (VPN)", "Syncthing", "Batch Scripting (.bat)", "Réseau / Partage de fichiers"],
@@ -126,6 +129,9 @@ export const projects: Project[] = [
                     { code: "AC31.01", level: "acquis", details: "Conception d'une architecture résiliente (Haute Disponibilité) avec réplication et basculement." }
                 ]
             }
+        ],
+        sources: [
+            { label: "Infrastructure Confidentielle", url: "#" }
         ]
     },
 
@@ -171,6 +177,9 @@ export const projects: Project[] = [
                     { code: "AC33.01", level: "acquis", details: "Mise en place d'une API d'extraction audio automatisée." }
                 ]
             }
+        ],
+        sources: [
+            { label: "Code Source (GitHub)", url: "https://github.com/Cern667/pianolanApp" }
         ]
     },
 
@@ -410,9 +419,18 @@ export const projects: Project[] = [
         dates: "Septembre 2025 - Janvier 2026",
         duration: "3 mois",
         team: "Équipe de 3 personnes",
-        description: "Conception et déploiement d'une infrastructure conteneurisée simulant un environnement de production.\n\nObjectif : rendre accessibles des outils DevOps (GitLab, SFTPGo) de manière sécurisée sans exposer le réseau local via Tunnel Cloudflare, Reverse Proxy Traefik et SSO Keycloak.",
-        image: "/images/devops/traefik.png",
+        description:
+            `Conception, déploiement et maintien en condition opérationnelle d'une infrastructure cloud hautement disponible (HA). Le projet a évolué d'une architecture mono-serveur vers un cluster distribué tolérant aux pannes.
+        
+        L'infrastructure est divisée en deux environnements isolés (Stack Métier et Stack Observabilité) pour garantir la résilience de la supervision :
+        • Orchestration & Stockage : Cluster Docker Swarm multi-nœuds avec réplication des services. Persistance des données assurée par un système de fichiers distribué GlusterFS.
+        • Automatisation (IaC) : Provisioning des serveurs via Ansible et déploiement automatisé par scripts shell (Cernlabs pour la prod, PCA pour la supervision).
+        • Réseau & Routage : Réseaux Overlay isolés, Reverse Proxy Traefik dynamique avec gestion avancée du trafic (Sticky Sessions pour le SSO Keycloak).
+        • Observabilité & Alerting : Supervision avec Grafana, centralisation des logs via Loki/Promtail, et développement d'un service 'Watchdog' sur mesure pour tester la disponibilité HTTP réelle des services et déclencher des alertes.
+        • Services Hébergés : Nextcloud (fichiers), SFTPGo (transferts), protégés par authentification centralisée OpenID Connect.`,
+        image: "/images/devops/sae-portail.png",
         images: [
+            "/images/devops/sae-portail.png",
             "/images/devops/traefik.png",
             "/images/devops/sftpgo.png",
             "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
@@ -453,7 +471,7 @@ export const projects: Project[] = [
                 ]
             }
         ],
-        sources: [{ label: "Application hébergée", url: "https://sae-gitlab.cerncloud.cloud" }]
+        sources: [{ label: "Application hébergée", url: "https://sae-portail.cerncloud.cloud" }]
     },
 
     // ---------------------------------------------------------------------
@@ -572,6 +590,9 @@ export const projects: Project[] = [
                     { code: "AC36.04", level: "acquis", details: "Coordination d'une équipe de 5 personnes sur la durée." }
                 ]
             }
+        ],
+        sources: [
+            { label: "Dépôt GitLab", url: "https://gitlab.pikudev.cloud/sae-referundum/" }
         ]
     },
     {
@@ -590,6 +611,32 @@ export const projects: Project[] = [
                 name: "Administrer",
                 apprentissages: [
                     { code: "AC33.01", level: "acquis", details: "Mise en place d'un processus de traitement totalement automatisé." }
+                ]
+            }
+        ]
+    },
+    {
+        id: 2,
+        title: "E-commerce PHP",
+        slug: "ecommerce-php",
+        category: "iut",
+        dates: "Octobre 2025",
+        duration: "1 mois",
+        team: "Équipe de 3",
+        description: "Site e-commerce MVC.",
+        image: "/images/sitePHP.png",
+        technologies: ["PHP", "MySQL", "JavaScript"],
+        competencesNiveau3: [
+            {
+                name: "Réaliser",
+                apprentissages: [
+                    { code: "AC31.01", level: "acquis", details: "Architecture MVC appliquée au web." }
+                ]
+            },
+            {
+                name: "Collaborer",
+                apprentissages: [
+                    { code: "AC36.04", level: "acquis", details: "Organisation du travail en équipe de 3." }
                 ]
             }
         ]

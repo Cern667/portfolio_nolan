@@ -99,9 +99,9 @@ function FilterButton({
       onClick={onClick}
       variant={active ? "default" : "outline"}
       size="lg"
-      className={`relative transition-all duration-300 ${active
-          ? "bg-primary-kaliRed hover:bg-primary-redDark text-white shadow-glow-red border-primary-kaliRed"
-          : "border-primary-grayBorder hover:border-primary-kaliRed hover:text-primary-kaliRed"
+      className={`relative transition-all duration-300 font-headline uppercase tracking-widest text-sm ${active
+        ? "bg-primary-kaliRed hover:bg-primary-redDark text-white shadow-glow-red border border-primary-kaliRed"
+        : "bg-primary-gray border border-primary-grayBorder text-gray-400 hover:border-primary-kaliRed hover:text-primary-white hover:bg-primary-kaliRed/10"
         }`}
     >
       {children}
@@ -157,8 +157,8 @@ function ProjectCard({
           <div className="absolute top-4 right-4">
             <span
               className={`px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm ${project.category === "perso"
-                  ? "bg-primary-kaliRed/80 text-white border border-primary-kaliRed shadow-glow-red"
-                  : "bg-primary-burgundy/80 text-white border border-primary-burgundy"
+                ? "bg-primary-kaliRed/80 text-white border border-primary-kaliRed shadow-glow-red"
+                : "bg-primary-burgundy/80 text-white border border-primary-burgundy"
                 }`}
             >
               {project.category === "perso" ? "Personnel" : "IUT"}
