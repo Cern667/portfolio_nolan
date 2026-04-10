@@ -27,7 +27,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary-kaliRed via-primary-red to-primary-burgundy bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 font-headline text-primary-white">
             Mes Projets
           </h1>
           <p className="text-xl text-gray-400">
@@ -99,11 +99,10 @@ function FilterButton({
       onClick={onClick}
       variant={active ? "default" : "outline"}
       size="lg"
-      className={`relative transition-all duration-300 ${
-        active
+      className={`relative transition-all duration-300 ${active
           ? "bg-primary-kaliRed hover:bg-primary-redDark text-white shadow-glow-red border-primary-kaliRed"
           : "border-primary-grayBorder hover:border-primary-kaliRed hover:text-primary-kaliRed"
-      }`}
+        }`}
     >
       {children}
       {active && (
@@ -157,11 +156,10 @@ function ProjectCard({
           {/* Category Badge */}
           <div className="absolute top-4 right-4">
             <span
-              className={`px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm ${
-                project.category === "perso"
+              className={`px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm ${project.category === "perso"
                   ? "bg-primary-kaliRed/80 text-white border border-primary-kaliRed shadow-glow-red"
                   : "bg-primary-burgundy/80 text-white border border-primary-burgundy"
-              }`}
+                }`}
             >
               {project.category === "perso" ? "Personnel" : "IUT"}
             </span>

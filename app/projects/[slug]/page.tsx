@@ -20,6 +20,10 @@ export default function ProjectDetail({
   params: { slug: string };
 }) {
   const project = getProjectBySlug(params.slug);
+  const allProjs = getAllProjects();
+  const currentIndex = allProjs.findIndex((p) => p.slug === params.slug);
+  const nextProject =
+    currentIndex !== -1 ? allProjs[(currentIndex + 1) % allProjs.length] : null;
 
   if (!project) {
     notFound();
@@ -125,6 +129,31 @@ export default function ProjectDetail({
 
           {/* Sidebar */}
           <div className="space-y-6">
+            {/* Next Project Card */}
+            {nextProject && (
+              <div className="bg-primary-gray rounded-xl p-6 border border-primary-grayBorder hover:border-primary-kaliRed/50 transition-colors group relative overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-kaliRed/30 to-transparent group-hover:via-primary-kaliRed/80 transition-all duration-500" />
+                <h3 className="text-sm font-headline tracking-widest uppercase text-gray-500 mb-4 flex items-center justify-between">
+                  Projet Suivant
+                  <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 group-hover:text-primary-kaliRed transition-all" />
+                </h3>
+                <Link href={`/projects/${nextProject.slug}`} className="block">
+                  <div className="relative h-24 mb-3 rounded-lg overflow-hidden border border-gray-800">
+                    <Image
+                      src={nextProject.image}
+                      alt={nextProject.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-primary-black/40 group-hover:bg-transparent transition-colors duration-300" />
+                  </div>
+                  <h4 className="font-bold text-primary-white group-hover:text-primary-kaliRed transition-colors">
+                    {nextProject.title}
+                  </h4>
+                </Link>
+              </div>
+            )}
+
             {/* Project Details Card */}
             <div className="bg-primary-gray rounded-xl p-6 border border-gray-800 space-y-4">
               <h3 className="text-xl font-bold text-primary-white mb-4">

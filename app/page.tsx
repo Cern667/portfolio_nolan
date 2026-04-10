@@ -61,9 +61,9 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary-kaliRed hover:bg-primary-redDark text-white shadow-glow-red"
+                className="bg-primary-kaliRed hover:bg-primary-redDark text-white shadow-glow-red font-headline uppercase tracking-widest"
               >
-                <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+                <Link href="/cv/cv_nolan_pujol.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-5 w-5" />
                   Voir mon CV
                 </Link>

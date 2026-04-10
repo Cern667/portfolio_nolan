@@ -320,7 +320,7 @@ export default function About() {
           >
             <div className="bg-primary-darker p-1 rounded-xl">
               <Image
-                src="https://images.unsplash.com/photo-1518659616892-b4e8d3ba1a1c?w=800&q=80"
+                src="https://images.unsplash.com/photo-1513028738826-f000cded30a4?q=80&w=800&auto=format&fit=crop"
                 alt="Handball in action"
                 className="rounded-lg w-full object-cover h-[250px] md:h-[400px] grayscale hover:grayscale-0 transition-all duration-700"
                 width={400}
@@ -386,7 +386,7 @@ export default function About() {
             onClick={() => window.location.href = '/contact'}
             className="bg-primary-kaliRed text-white px-8 py-4 rounded-xl font-bold font-headline uppercase tracking-widest hover:bg-primary-red transition-all flex items-center gap-3 shadow-[0_0_20px_rgba(241,28,28,0.2)]"
           >
-            Lancer la communication
+            Me contacter
             <Send className="w-5 h-5" />
           </button>
         </div>

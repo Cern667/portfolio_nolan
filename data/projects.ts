@@ -144,9 +144,8 @@ export const projects: Project[] = [
         description: "Développement d'une PWA (Progressive Web App) 'offline-first' dédiée aux musiciens pour la scène.\n\nL'application permet de centraliser des setlists, de lire des partitions PDF (avec gestion intelligente des pages multiples) et de créer des grilles d'accords interactives dotées d'un visualiseur de piano.\n\nPour les répétitions, un système backend en Python (FastAPI + yt-dlp) permet de chercher une musique sur YouTube et d'importer directement l'audio dans l'application.\n\nTout est pensé pour le live : un mode 'Performance' verrouille l'écran, synchronise l'audio avec la partition, et permet de passer à la suite d'un simple glissement de doigt, le tout sans connexion internet grâce au stockage local (IndexedDB) couplé à une sauvegarde Cloud.",
         image: "https://images.unsplash.com/photo-1552422535-c45813c61732?w=800&q=80",
         images: [
-            "https://images.unsplash.com/photo-1552422535-c45813c61732?w=800&q=80",
-            "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80",
-            "https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?w=800&q=80"
+            "/images/pianolan/dash.png",
+            "/images/pianolan/setlist.png"
         ],
         technologies: ["Vue.js 3", "Tailwind CSS", "Supabase (Auth/Cloud)", "Python (FastAPI)", "yt-dlp", "Tonal.js", "IndexedDB", "Capacitor (APK)"],
         competencesNiveau2: [

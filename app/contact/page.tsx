@@ -7,24 +7,35 @@ import Image from "next/image";
 export default function Contact() {
   return (
     <div className="min-h-screen bg-primary-black text-primary-white flex flex-col pt-24">
-      <main className="flex-grow max-w-screen-xl mx-auto px-6 py-12 md:py-24 w-full">
+      <main className="flex-grow max-w-screen-2xl mx-auto px-8 py-16 w-full">
         {/* Hero Section / Editorial Header */}
         <section className="mb-20 ml-0 md:ml-20 max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 mb-6"
+          >
+            <div className="w-12 h-[2px] bg-primary-kaliRed"></div>
+            <span className="font-headline uppercase tracking-widest text-primary-kaliRed text-sm font-semibold">
+              Profil
+            </span>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-8"
           >
-            Établir une <span className="text-primary-kaliRed">connexion</span> sécurisée.
+            Allier déploiement et <span className="text-primary-kaliRed">cybersécurité.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-gray-400 text-lg md:text-xl max-w-2xl font-light leading-relaxed"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-gray-400 text-lg md:text-xl max-w-2xl font-light leading-relaxed italic"
           >
-            Vous avez un projet d&apos;infrastructure, un besoin d&apos;audit de sécurité ou une architecture CI/CD à automatiser ? Le canal est ouvert.
+            Je me spécialise dans la mise en place d&apos;infrastructures communicantes et protégées. Je recherche une entreprise pour m&apos;accueillir en alternance à partir de septembre 2026. Si vous cherchez un profil curieux et technique pour vos enjeux de sécurité, n&apos;hésitez pas à me contacter.
           </motion.p>
         </section>
 
@@ -41,7 +52,7 @@ export default function Contact() {
             <form className="space-y-8" action="https://formspree.io/f/mqakeowb" method="POST">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label className="block text-xs uppercase tracking-widest text-gray-400 ml-1">First Name</label>
+                  <label className="block text-xs uppercase tracking-widest text-gray-400 ml-1 font-headline">Prénom</label>
                   <input
                     name="firstname"
                     className="w-full bg-primary-black/50 border-none border-b border-primary-grayBorder/50 text-primary-white placeholder:text-gray-600 px-4 py-4 rounded-lg focus:ring-0 focus:border-primary-kaliRed transition-all"
@@ -51,7 +62,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-xs uppercase tracking-widest text-gray-400 ml-1">Last Name</label>
+                  <label className="block text-xs uppercase tracking-widest text-gray-400 ml-1 font-headline">Nom</label>
                   <input
                     name="lastname"
                     className="w-full bg-primary-black/50 border-none border-b border-primary-grayBorder/50 text-primary-white placeholder:text-gray-600 px-4 py-4 rounded-lg focus:ring-0 focus:border-primary-kaliRed transition-all"
@@ -83,9 +94,9 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full md:w-auto px-10 py-4 bg-primary-kaliRed text-white font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-primary-red transition-all active:scale-95 shadow-glow-kali border border-primary-kaliRed"
+                className="w-full md:w-auto px-10 py-4 bg-primary-kaliRed text-white font-bold uppercase tracking-widest text-sm rounded-xl hover:bg-primary-red transition-all active:scale-95 shadow-glow-kali border border-primary-kaliRed font-headline"
               >
-                Initialiser la Transmission
+                Envoyer votre message
               </button>
             </form>
           </motion.div>
@@ -124,7 +135,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                href="https://linkedin.com/in/nolan-pujol"
+                href="https://www.linkedin.com/in/nolan-pujol-a6ab502aa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-primary-gray p-6 rounded-lg border border-primary-grayBorder hover:scale-[1.02] hover:border-primary-kaliRed/50 transition-all group"

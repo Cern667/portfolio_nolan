@@ -5,10 +5,10 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
-  { name: "GitHub", icon: Github, href: "https://github.com" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/nolan-pujol-a6ab502aa" },
+  { name: "GitHub", icon: Github, href: "https://github.com/Cern667" },
   { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
-  { name: "Email", icon: Mail, href: "mailto:nolan@example.com" },
+  { name: "Email", icon: Mail, href: "mailto:nolan.pujol@etu.umontpellier.fr" },
 ];
 
 export default function Footer() {
@@ -32,47 +32,39 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-primary-white">
-              Navigation
+            <h4 className="text-lg font-semibold mb-4 text-primary-white font-headline">
+              Navigation Rapide
             </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-400 hover:text-primary-kaliRed transition-colors group flex items-center gap-2"
-                >
-                  <span className="text-primary-kaliRed opacity-0 group-hover:opacity-100 transition-opacity">&gt;</span>
-                  Accueil
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-400 hover:text-primary-kaliRed transition-colors group flex items-center gap-2"
-                >
-                  <span className="text-primary-kaliRed opacity-0 group-hover:opacity-100 transition-opacity">&gt;</span>
-                  À propos
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects"
-                  className="text-gray-400 hover:text-primary-kaliRed transition-colors group flex items-center gap-2"
-                >
-                  <span className="text-primary-kaliRed opacity-0 group-hover:opacity-100 transition-opacity">&gt;</span>
-                  Projets
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-400 hover:text-primary-kaliRed transition-colors group flex items-center gap-2"
-                >
-                  <span className="text-primary-kaliRed opacity-0 group-hover:opacity-100 transition-opacity">&gt;</span>
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            <div className="grid grid-cols-2 gap-y-3">
+              <Link
+                href="/"
+                className="text-gray-400 hover:text-primary-kaliRed transition-colors group flex items-center gap-2"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-grayBorder group-hover:bg-primary-kaliRed transition-colors" />
+                Accueil
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-400 hover:text-primary-kaliRed transition-colors group flex items-center gap-2"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-grayBorder group-hover:bg-primary-kaliRed transition-colors" />
+                À propos
+              </Link>
+              <Link
+                href="/projects"
+                className="text-gray-400 hover:text-primary-kaliRed transition-colors group flex items-center gap-2"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-grayBorder group-hover:bg-primary-kaliRed transition-colors" />
+                Projets
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-400 hover:text-primary-kaliRed transition-colors group flex items-center gap-2"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-grayBorder group-hover:bg-primary-kaliRed transition-colors" />
+                Contact
+              </Link>
+            </div>
           </div>
 
           {/* Social Links */}
