@@ -120,9 +120,9 @@ export default function Contact() {
                   <p className="text-gray-400 text-sm mb-4">Temps de réponse moyen : &lt; 24h</p>
                   <a
                     className="text-primary-kaliRed font-mono text-lg hover:underline decoration-primary-kaliRed/30 underline-offset-4"
-                    href="mailto:nolan.pujol@etu.umontpellier.fr"
+                    href="mailto:nolanpujol.pro34@gmail.com"
                   >
-                    nolan.pujol@etu.umontpellier.fr
+                    nolanpujol.pro34@gmail.com
                   </a>
                 </div>
               </div>

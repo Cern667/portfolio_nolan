@@ -58,38 +58,54 @@ export default function About() {
               <GraduationCap className="text-primary-kaliRed w-8 h-8" />
               Mon Parcours
             </h2>
-            <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-light relative z-10">
+              <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-light relative z-10">
               <p>
-                Actuellement en <strong className="text-primary-kaliRed font-semibold">3ème année de BUT Informatique à l&apos;IUT de Montpellier-Sète</strong>, je me spécialise dans le développement d&apos;applications communicantes et sécurisées.
+                Actuellement en <strong className="text-primary-kaliRed font-semibold">3ème année de BUT Informatique à l&apos;IUT de Montpellier-Sète</strong>, je me spécialise dans les environnements communicants et sécurisés avec un intérêt marqué pour la cybersécurité, le DevOps et les infrastructures.
               </p>
 
               <div className="mt-6">
-                <h3 className="text-primary-white font-bold text-xl mb-2 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-primary-kaliRed" />
-                  Mon cap : La Cybersécurité & le DevOps
+                <h3 className="text-white font-bold text-xl mb-2 flex items-center gap-2 drop-shadow-sm">
+                  <Cpu className="w-5 h-5 text-primary-kaliRed" />
+                  Cybersécurité, DevOps & Infrastructure
                 </h3>
                 <p>
-                  Si mon objectif principal est de devenir <strong className="text-primary-white">Pentester</strong>, je suis convaincu que la sécurité moderne passe par la maîtrise de l&apos;infrastructure. C&apos;est pourquoi je m&apos;oriente vers un profil <strong className="text-primary-white">DevSecOps</strong> : depuis cette année, je me forme intensivement aux outils de déploiement comme Ansible et Terraform. J&apos;ai d&apos;ailleurs décroché mon stage de fin d&apos;études chez <strong className="text-primary-kaliRed">Engie</strong> (avril 2026), une opportunité en or pour mettre ces compétences à l&apos;épreuve du réel.
+                  Au travers de mes projets et expériences, j&apos;ai travaillé sur :
+                </p>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  <li>l&apos;administration de serveurs Linux et d&apos;environnements Windows / Active Directory (GPO) ;</li>
+                  <li>des infrastructures virtualisées et conteneurisées (Docker, Docker Swarm, K3s, VirtualBox) ;</li>
+                  <li>des architectures sécurisées intégrant VPN, reverse proxy, pfSense, SSL Inspection, supervision et PRA/PCA ;</li>
+                  <li>l&apos;automatisation et les approches DevSecOps avec des outils comme Ansible et Terraform.</li>
+                </ul>
+                <p className="mt-2">
+                  Je m&apos;intéresse également aux usages de l&apos;IA appliqués à l&apos;automatisation, à l&apos;analyse de données techniques et à l&apos;optimisation des processus en entreprise.
                 </p>
               </div>
 
               <div className="mt-6">
-                <h3 className="text-primary-white font-bold text-xl mb-2 flex items-center gap-2">
-                  <Cpu className="w-5 h-5 text-primary-kaliRed" />
+                <h3 className="text-white font-bold text-xl mb-2 flex items-center gap-2 drop-shadow-sm">
+                  <ShieldCheck className="w-5 h-5 text-primary-kaliRed" />
                   Touche-à-tout et Proactif
                 </h3>
                 <p>
-                  Avant de plonger dans le monde professionnel, ma philosophie est simple : explorer sans limite. Je réalise de nombreux projets d&apos;applications variés pour comprendre un maximum de technologies. Cette curiosité me permet d&apos;avoir une vision globale, indispensable pour identifier des vulnérabilités lors de mes sessions de <strong className="text-primary-white">Pentesting et de CTF.</strong>
+                  Ma philosophie est simple : explorer et expérimenter un maximum de technologies afin de développer une vision globale des systèmes d&apos;information.
+                  Je réalise régulièrement des projets autour de la cybersécurité, des infrastructures, du DevOps, de l&apos;automatisation et plus récemment de l&apos;IA, aussi bien dans des environnements virtualisés que conteneurisés.
+                </p>
+                <p className="mt-2">
+                  Cette curiosité me permet de mieux comprendre les interactions entre développement, réseau, sécurité et exploitation, tout en renforçant ma capacité d&apos;analyse et d&apos;adaptation sur des environnements techniques variés.
                 </p>
               </div>
 
               <div className="mt-6">
-                <h3 className="text-primary-white font-bold text-xl mb-2 flex items-center gap-2">
+                <h3 className="text-white font-bold text-xl mb-2 flex items-center gap-2 drop-shadow-sm">
                   <Terminal className="w-5 h-5 text-primary-kaliRed" />
                   Et demain ?
                 </h3>
                 <p>
-                  Pour la rentrée prochaine, j&apos;aspire à intégrer le Master Cybersécurité du CNAM ou la filière DevOps de Polytech. Mon but idéal : poursuivre en alternance, possiblement au sein de ma structure d&apos;accueil actuelle si l&apos;expérience est concluante.
+                  À partir de septembre 2026, je poursuivrai mon parcours soit au sein de l&apos;école d&apos;ingénieur CESI, soit en Master Cybersécurité à Montpellier, dans le cadre d&apos;une alternance de 2 à 3 ans.
+                </p>
+                <p className="mt-2">
+                  Mon objectif est d&apos;évoluer sur des projets mêlant cybersécurité, infrastructures, DevOps, automatisation et technologies innovantes.
                 </p>
               </div>
             </div>
