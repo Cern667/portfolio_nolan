@@ -60,52 +60,64 @@ export default function About() {
             </h2>
               <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-light relative z-10">
               <p>
-                Actuellement en <strong className="text-primary-kaliRed font-semibold">3ème année de BUT Informatique à l&apos;IUT de Montpellier-Sète</strong>, je me spécialise dans les environnements communicants et sécurisés avec un intérêt marqué pour la cybersécurité, le DevOps et les infrastructures.
+                Récemment diplômé d&apos;un <strong className="text-primary-kaliRed font-semibold">BUT Informatique à l&apos;IUT de Montpellier-Sète</strong>, je poursuis mon cursus en école d&apos;ingénieurs au <strong className="text-primary-kaliRed font-semibold">CESI ou au CNAM</strong> dans la filière cybersécurité. Passionné par l&apos;automatisation et la sécurisation des systèmes, je développe un profil hybride à l&apos;intersection du DevOps, du DevSecOps et de la sécurité des réseaux.
               </p>
 
-              <div className="mt-6">
+              <div className="mt-6 border-t border-primary-grayBorder/40 pt-6">
+                <h3 className="text-white font-bold text-xl mb-3 flex items-center gap-2 drop-shadow-sm">
+                  <Shield className="w-5 h-5 text-primary-kaliRed" />
+                  Expérience Professionnelle – Engie Green (Stage)
+                </h3>
+                <p className="text-primary-kaliRed font-mono text-sm mb-2">
+                  Chargé de missions Cybersécurité &amp; Infrastructure
+                </p>
+                <p className="text-gray-400 text-base leading-relaxed mb-3">
+                  Au sein d&apos;Engie Green, j&apos;ai contribué à l&apos;évaluation et au renforcement de la sécurité des infrastructures industrielles de production d&apos;énergies renouvelables :
+                </p>
+                <ul className="list-disc list-inside space-y-1.5 text-base text-gray-400 pl-2">
+                  <li><strong>Audits de conformité :</strong> Analyse et contrôle technique des politiques de sécurité appliquées aux systèmes de supervision.</li>
+                  <li><strong>Durcissement système (Hardening) :</strong> Configuration sécurisée et limitation de la surface d&apos;attaque des stations d&apos;administration.</li>
+                  <li><strong>Gestion des vulnérabilités :</strong> Suivi des correctifs et évaluation des risques associés aux équipements réseau.</li>
+                  <li><strong>Automatisation :</strong> Scripting de contrôles de sécurité récurrents pour assurer l&apos;intégrité opérationnelle.</li>
+                </ul>
+              </div>
+
+              <div className="mt-6 border-t border-primary-grayBorder/40 pt-6">
                 <h3 className="text-white font-bold text-xl mb-2 flex items-center gap-2 drop-shadow-sm">
                   <Cpu className="w-5 h-5 text-primary-kaliRed" />
-                  Cybersécurité, DevOps & Infrastructure
+                  Cybersécurité, DevOps &amp; Infrastructure
                 </h3>
                 <p>
-                  Au travers de mes projets et expériences, j&apos;ai travaillé sur :
+                  Mon expertise technique s&apos;articule autour de plusieurs piliers d&apos;infrastructures modernes :
                 </p>
                 <ul className="list-disc list-inside mt-2 space-y-1">
-                  <li>l&apos;administration de serveurs Linux et d&apos;environnements Windows / Active Directory (GPO) ;</li>
-                  <li>des infrastructures virtualisées et conteneurisées (Docker, Docker Swarm, K3s, VirtualBox) ;</li>
-                  <li>des architectures sécurisées intégrant VPN, reverse proxy, pfSense, SSL Inspection, supervision et PRA/PCA ;</li>
-                  <li>l&apos;automatisation et les approches DevSecOps avec des outils comme Ansible et Terraform.</li>
+                  <li>l&apos;administration système avancée Linux et Windows Server / Active Directory (GPO de durcissement) ;</li>
+                  <li>l&apos;orchestration conteneurisée (Docker, Docker Swarm, K3s) et la virtualisation ;</li>
+                  <li>la conception de topologies réseau protégées (VLANs, VPN SSL/IPsec, pare-feux FortiGate, reverse-proxies Traefik) ;</li>
+                  <li>l&apos;automatisation et l&apos;Infrastructure as Code (Ansible, Terraform, CI/CD).</li>
                 </ul>
                 <p className="mt-2">
-                  Je m&apos;intéresse également aux usages de l&apos;IA appliqués à l&apos;automatisation, à l&apos;analyse de données techniques et à l&apos;optimisation des processus en entreprise.
+                  Je me forme également de manière active aux usages de l&apos;intelligence artificielle (IA) appliqués à la détection de menaces, à l&apos;analyse de logs et à l&apos;automatisation des processus opérationnels.
                 </p>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-6 border-t border-primary-grayBorder/40 pt-6">
                 <h3 className="text-white font-bold text-xl mb-2 flex items-center gap-2 drop-shadow-sm">
                   <ShieldCheck className="w-5 h-5 text-primary-kaliRed" />
                   Touche-à-tout et Proactif
                 </h3>
                 <p>
-                  Ma philosophie est simple : explorer et expérimenter un maximum de technologies afin de développer une vision globale des systèmes d&apos;information.
-                  Je réalise régulièrement des projets autour de la cybersécurité, des infrastructures, du DevOps, de l&apos;automatisation et plus récemment de l&apos;IA, aussi bien dans des environnements virtualisés que conteneurisés.
-                </p>
-                <p className="mt-2">
-                  Cette curiosité me permet de mieux comprendre les interactions entre développement, réseau, sécurité et exploitation, tout en renforçant ma capacité d&apos;analyse et d&apos;adaptation sur des environnements techniques variés.
+                  Ma philosophie d&apos;apprentissage repose sur la pratique et l&apos;expérimentation (PoC). En montant mon propre homelab et en réalisant des audits de sécurité de façon autonome, j&apos;acquiers une vision systémique des interactions entre développement logiciel, réseau et sécurité opérationnelle.
                 </p>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-6 border-t border-primary-grayBorder/40 pt-6">
                 <h3 className="text-white font-bold text-xl mb-2 flex items-center gap-2 drop-shadow-sm">
                   <Terminal className="w-5 h-5 text-primary-kaliRed" />
-                  Et demain ?
+                  Recherche d&apos;Alternance
                 </h3>
                 <p>
-                  À partir de septembre 2026, je poursuivrai mon parcours soit au sein de l&apos;école d&apos;ingénieur CESI, soit en Master Cybersécurité à Montpellier, dans le cadre d&apos;une alternance de 2 à 3 ans.
-                </p>
-                <p className="mt-2">
-                  Mon objectif est d&apos;évoluer sur des projets mêlant cybersécurité, infrastructures, DevOps, automatisation et technologies innovantes.
+                  Dès septembre 2026, dans le cadre de mon cycle d&apos;ingénieur CESI / CNAM, je recherche un contrat d&apos;alternance de <strong className="text-primary-kaliRed font-semibold">36 mois</strong> sur des fonctions de **DevOps / DevSecOps**, **Administrateur Réseaux &amp; Sécurité** ou **Analyste Cybersécurité**.
                 </p>
               </div>
             </div>
@@ -122,14 +134,18 @@ export default function About() {
               <h3 className="text-primary-kaliRed font-headline uppercase text-xs tracking-widest mb-4">
                 Statut Actuel
               </h3>
-              <p className="text-xl font-bold mb-2 text-primary-white">Étudiant BUT 3</p>
-              <p className="text-sm text-gray-400">Spécialisation Cybersécurité &amp; DevOps</p>
+              <p className="text-xl font-bold mb-2 text-primary-white">Diplômé BUT Informatique</p>
+              <p className="text-sm text-gray-400">Poursuite École d&apos;Ingénieurs (CESI / CNAM)</p>
+              <p className="text-xs text-primary-kaliRed font-mono mt-1">Filière Cybersécurité</p>
             </div>
-            {/* AI Image removed as requested */}
+            {/* Active search card */}
             <div className="bg-primary-darker p-8 rounded-xl border border-primary-grayBorder flex flex-col justify-center items-center text-center">
-              <Shield className="w-16 h-16 text-primary-kaliRed mb-4 opacity-50" />
-              <p className="font-mono text-sm text-gray-500 uppercase tracking-widest">
-                Recherche active<br />Alternance 2026
+              <Shield className="w-16 h-16 text-primary-kaliRed mb-4 opacity-50 shadow-glow-red" />
+              <p className="font-mono text-sm text-primary-white font-bold uppercase tracking-widest mb-2">
+                Recherche Alternance
+              </p>
+              <p className="text-xs text-gray-400">
+                Contrat de 36 mois<br />dès Septembre 2026
               </p>
             </div>
           </motion.div>

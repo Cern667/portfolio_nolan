@@ -33,9 +33,9 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-lg md:text-xl max-w-2xl font-light leading-relaxed italic"
+            className="text-gray-400 text-lg md:text-xl max-w-2xl font-light leading-relaxed"
           >
-            Je me spécialise dans la mise en place d&apos;infrastructures communicantes et protégées. Je recherche une entreprise pour m&apos;accueillir en alternance à partir de septembre 2026. Si vous cherchez un profil curieux et technique pour vos enjeux de sécurité, n&apos;hésitez pas à me contacter.
+            Diplômé d&apos;un BUT Informatique et poursuivant en école d&apos;ingénieurs en cybersécurité (CESI / CNAM), je recherche une alternance de <strong className="text-primary-kaliRed font-semibold">36 mois</strong> à partir de septembre 2026 dans les domaines du DevOps, du DevSecOps, de l&apos;administration système et de la sécurité réseau. N&apos;hésitez pas à me contacter pour échanger sur nos opportunités de collaboration.
           </motion.p>
         </section>
 

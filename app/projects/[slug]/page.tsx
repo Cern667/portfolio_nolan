@@ -4,8 +4,13 @@ import Link from "next/link";
 import { getProjectBySlug, getAllProjects } from "@/data/projects";
 import { ArrowLeft, Calendar, Clock, Users, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import CompetencesDisplay from "@/components/CompetencesDisplay";
 import ImageSlider from "@/components/ImageSlider";
+import NetworkTopology from "@/components/NetworkTopology";
+import SsoFlowAnimation from "@/components/SsoFlowAnimation";
+import PhishingFlowAnimation from "@/components/PhishingFlowAnimation";
+import AdInfrastructure from "@/components/AdInfrastructure";
+import DevSecOpsTopology from "@/components/DevSecOpsTopology";
+import P2pWebRtcFlow from "@/components/P2pWebRtcFlow";
 
 export async function generateStaticParams() {
   const projects = getAllProjects();
@@ -49,7 +54,7 @@ export default function ProjectDetail({
                 : "bg-primary-burgundy/20 text-primary-burgundy border border-primary-burgundy"
                 }`}
             >
-              {project.category === "perso" ? "Projet Personnel" : "Projet IUT"}
+              {project.category === "perso" ? "Projet Personnel" : "Projet École"}
             </span>
           </div>
 
@@ -96,10 +101,47 @@ export default function ProjectDetail({
               <h2 className="text-2xl font-bold text-primary-white">
                 Description du projet
               </h2>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="text-gray-300 leading-relaxed text-lg whitespace-pre-wrap">
                 {project.description}
               </p>
             </div>
+
+            {/* Custom Interactive Elements for homelab & fortigate */}
+            {project.slug === "homelab-sso-authentik" && (
+              <div className="mt-8">
+                <SsoFlowAnimation />
+              </div>
+            )}
+            
+            {project.slug === "fortigate-security-network" && (
+              <div className="mt-8">
+                <NetworkTopology />
+              </div>
+            )}
+
+            {project.slug === "phishing-attack-chain-analysis" && (
+              <div className="mt-8">
+                <PhishingFlowAnimation />
+              </div>
+            )}
+
+            {project.slug === "active-directory-ecole" && (
+              <div className="mt-8">
+                <AdInfrastructure />
+              </div>
+            )}
+
+            {project.slug === "infra-auth-devops" && (
+              <div className="mt-8">
+                <DevSecOpsTopology />
+              </div>
+            )}
+
+            {project.slug === "cerndrop-p2p-webrtc" && (
+              <div className="mt-8">
+                <P2pWebRtcFlow />
+              </div>
+            )}
 
             {/* Technologies */}
             <div className="space-y-4">
@@ -117,14 +159,6 @@ export default function ProjectDetail({
                 ))}
               </div>
             </div>
-
-            {/* Competences */}
-            {(project.competencesNiveau2?.length || project.competencesNiveau3?.length) ? (
-              <CompetencesDisplay
-                competencesNiveau2={project.competencesNiveau2}
-                competencesNiveau3={project.competencesNiveau3}
-              />
-            ) : null}
           </div>
 
           {/* Sidebar */}

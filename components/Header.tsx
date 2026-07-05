@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Terminal } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 
 const navItems = [
@@ -71,15 +71,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Actions (Terminal & Mobile Menu) */}
+          {/* Actions (Mobile Menu) */}
           <div className="flex items-center gap-2 md:gap-4 md:border-l md:border-primary-grayBorder md:pl-6">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-primary-kaliRed hover:bg-primary-gray/50 rounded-md transition-all active:scale-95 duration-100 hidden md:flex"
-            >
-              <Terminal className="w-5 h-5" />
-            </Button>
 
             {/* Mobile Menu Button */}
             <Button

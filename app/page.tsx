@@ -48,8 +48,7 @@ export default function Home() {
               transition={{ delay: 0.6 }}
               className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed"
             >
-              Étudiant en 3ème année de BUT Informatique, spécialité développement
-              d&apos;applications communicantes et sécurisées
+              Diplômé de BUT Informatique, spécialisé en DevOps, DevSecOps et Sécurisation Réseau.
             </motion.p>
 
             <motion.div
