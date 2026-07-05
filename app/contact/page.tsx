@@ -35,7 +35,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-400 text-lg md:text-xl max-w-2xl font-light leading-relaxed"
           >
-            Diplômé d&apos;un BUT Informatique et poursuivant en école d&apos;ingénieurs en cybersécurité (CESI / CNAM), je recherche une alternance de <strong className="text-primary-kaliRed font-semibold">36 mois</strong> à partir de septembre 2026 dans les domaines du DevOps, du DevSecOps, de l&apos;administration système et de la sécurité réseau. N&apos;hésitez pas à me contacter pour échanger sur nos opportunités de collaboration.
+            Diplômé d&apos;un BUT Informatique, je prévois d&apos;intégrer un cursus d&apos;ingénieur en cybersécurité au CESI ou au CNAM (selon l&apos;opportunité d&apos;alternance). À ce titre, je recherche une alternance de <strong className="text-primary-kaliRed font-semibold">36 mois</strong> à partir de septembre 2026 dans les domaines du DevOps, du DevSecOps, de l&apos;administration système et de la sécurité réseau. N&apos;hésitez pas à me contacter pour échanger sur nos opportunités de collaboration.
           </motion.p>
         </section>
 

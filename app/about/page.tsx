@@ -60,7 +60,7 @@ export default function About() {
             </h2>
               <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-light relative z-10">
               <p>
-                Récemment diplômé d&apos;un <strong className="text-primary-kaliRed font-semibold">BUT Informatique à l&apos;IUT de Montpellier-Sète</strong>, je poursuis mon cursus en école d&apos;ingénieurs au <strong className="text-primary-kaliRed font-semibold">CESI ou au CNAM</strong> dans la filière cybersécurité. Passionné par l&apos;automatisation et la sécurisation des systèmes, je développe un profil hybride à l&apos;intersection du DevOps, du DevSecOps et de la sécurité des réseaux.
+                Récemment diplômé d&apos;un <strong className="text-primary-kaliRed font-semibold">BUT Informatique à l&apos;IUT de Montpellier-Sète</strong>, j&apos;ambitionne de poursuivre mon cursus en école d&apos;ingénieurs (CESI ou CNAM) dans la filière cybersécurité. Mon admission finale dépendra de l&apos;obtention de mon contrat d&apos;alternance, moteur principal de mon projet professionnel. Passionné par l&apos;automatisation et la sécurisation des systèmes, je développe un profil hybride à l&apos;intersection du DevOps, du DevSecOps et de la sécurité des réseaux.
               </p>
 
               <div className="mt-6 border-t border-primary-grayBorder/40 pt-6">
@@ -117,7 +117,7 @@ export default function About() {
                   Recherche d&apos;Alternance
                 </h3>
                 <p>
-                  Dès septembre 2026, dans le cadre de mon cycle d&apos;ingénieur CESI / CNAM, je recherche un contrat d&apos;alternance de <strong className="text-primary-kaliRed font-semibold">36 mois</strong> sur des fonctions de **DevOps / DevSecOps**, **Administrateur Réseaux &amp; Sécurité** ou **Analyste Cybersécurité**.
+                  Dès septembre 2026, pour valider mon entrée en cycle d&apos;ingénieur (CESI / CNAM), je recherche activement un contrat d&apos;alternance de <strong className="text-primary-kaliRed font-semibold">36 mois</strong> sur des fonctions de **DevOps / DevSecOps**, **Administrateur Réseaux &amp; Sécurité** ou **Analyste Cybersécurité**.
                 </p>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function About() {
                 Statut Actuel
               </h3>
               <p className="text-xl font-bold mb-2 text-primary-white">Diplômé BUT Informatique</p>
-              <p className="text-sm text-gray-400">Poursuite École d&apos;Ingénieurs (CESI / CNAM)</p>
+              <p className="text-sm text-gray-400">Poursuite visée : CESI / CNAM (Sous réserve d&apos;alternance)</p>
               <p className="text-xs text-primary-kaliRed font-mono mt-1">Filière Cybersécurité</p>
             </div>
             {/* Active search card */}
