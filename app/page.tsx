@@ -1,117 +1,90 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import { Download, Github, Linkedin, Mail, Terminal } from "lucide-react";
+import { Github, Linkedin, Mail, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-black">
+    <div className="relative min-h-screen flex flex-col justify-between bg-transparent pt-32 pb-16 px-6 md:px-20 lg:px-24">
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-96 h-96 -top-48 -left-48 bg-primary-kaliRed/10 rounded-full blur-3xl" />
         <div className="absolute w-96 h-96 -bottom-48 -right-48 bg-primary-burgundy/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+      {/* Main Text Content (Centered vertically in the remaining space) */}
+      <div className="flex-grow flex flex-col justify-center my-auto relative z-10">
+        <div className="space-y-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-6"
+            className="text-7xl sm:text-8xl md:text-[8vw] font-extrabold text-primary-white tracking-tighter leading-[0.85] font-sans"
           >
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="text-primary-kaliRed text-lg font-headline tracking-wider uppercase"
-            >
-              Hello, Je suis
-            </motion.p>
+            Nolan<br />Pujol
+          </motion.h1>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-5xl md:text-7xl font-bold text-primary-white font-headline tracking-tighter"
-            >
-              Nolan Pujol
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed"
-            >
-              Diplômé de BUT Informatique, spécialisé en DevOps, DevSecOps et Sécurisation Réseau.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="flex gap-4 pt-4"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary-kaliRed hover:bg-primary-redDark text-white shadow-glow-red font-headline uppercase tracking-widest"
-              >
-                <Link href="/cv/cv_nolan_pujol.pdf" target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-5 w-5" />
-                  Voir mon CV
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-primary-kaliRed text-primary-kaliRed hover:bg-primary-kaliRed/10"
-              >
-                <Link href="/contact">Me contacter</Link>
-              </Button>
-            </motion.div>
-
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="flex gap-4 pt-8"
-            >
-              <SocialLink href="https://www.linkedin.com/in/nolan-pujol-a6ab502aa/" icon={<Linkedin />} />
-              <SocialLink href="https://github.com/Cern667" icon={<Github />} />
-              <SocialLink href="https://tryhackme.com/p/cernpentesthelsing" icon={<Terminal />} />
-              <SocialLink href="mailto:nolan.pujol@etu.umontpellier.fr" icon={<Mail />} />
-            </motion.div>
-          </motion.div>
-
-          {/* Right side - Profile image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex justify-center items-center"
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+            className="text-4xl sm:text-5xl md:text-[3.5vw] font-bold text-gray-500 tracking-tight leading-[0.95] font-sans"
           >
-            <div className="relative w-80 h-80 md:w-96 md:h-96">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-kaliRed to-primary-burgundy rounded-full blur-2xl opacity-30 animate-pulse" />
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary-kaliRed shadow-glow-kali">
-                <Image
-                  src="/images/hacker.jpg"
-                  alt="Nolan Pujol"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </motion.div>
+            Cyber, Network<br />& DevOps Student
+          </motion.h2>
         </div>
+      </div>
+
+      {/* Footer Area (Status + Actions on the left, Socials on the right) */}
+      <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 pt-10 border-t border-primary-grayBorder/30">
+        {/* Left Side: Status Dot + Pill buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="space-y-5"
+        >
+          <div className="flex items-center gap-2.5 text-gray-400 font-mono text-xs md:text-sm">
+            <span className="w-2 h-2 rounded-full bg-primary-kaliRed animate-pulse shadow-glow-red" />
+            <span>Recherche alternance Cyber / Réseau / DevOps (36 mois)</span>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-6">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary-white hover:bg-gray-200 text-primary-black font-semibold rounded-full px-8 py-5 h-auto text-sm md:text-base transition-all duration-300 shadow-lg"
+            >
+              <Link href="/contact">Me contacter</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="link"
+              className="text-primary-white hover:text-primary-kaliRed p-0 h-auto text-sm md:text-base font-semibold group"
+            >
+              <Link href="/cv/cv_nolan_pujol.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                Voir mon CV
+                <span className="group-hover:translate-x-1.5 transition-transform duration-300">→</span>
+              </Link>
+            </Button>
+          </div>
+        </motion.div>
+
+        {/* Right Side: Social Media Icons */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.45 }}
+          className="flex items-center gap-4"
+        >
+          <SocialLink href="https://www.linkedin.com/in/nolan-pujol-a6ab502aa/" icon={<Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />} />
+          <SocialLink href="https://github.com/Cern667" icon={<Github className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />} />
+          <SocialLink href="https://tryhackme.com/p/cernpentesthelsing" icon={<Terminal className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />} />
+          <SocialLink href="mailto:nolan.pujol@etu.umontpellier.fr" icon={<Mail className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />} />
+        </motion.div>
       </div>
     </div>
   );
@@ -123,9 +96,9 @@ function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.2, rotate: 5 }}
-      whileTap={{ scale: 0.9 }}
-      className="w-12 h-12 flex items-center justify-center rounded-full bg-primary-gray hover:bg-primary-kaliRed transition-colors border border-primary-grayBorder hover:border-primary-kaliRed hover:shadow-glow-red"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-black/30 hover:bg-primary-kaliRed border border-primary-grayBorder hover:border-primary-kaliRed hover:shadow-glow-red transition-all duration-300 group"
     >
       {icon}
     </motion.a>

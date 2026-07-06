@@ -33,7 +33,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen bg-primary-black pt-24 pb-16">
+    <div className="min-h-screen bg-transparent pt-24 pb-16">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <motion.div

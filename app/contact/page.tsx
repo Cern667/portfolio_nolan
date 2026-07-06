@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-primary-black text-primary-white flex flex-col pt-24">
+    <div className="min-h-screen bg-transparent text-primary-white flex flex-col pt-24">
       <main className="flex-grow max-w-screen-2xl mx-auto px-8 py-16 w-full">
         {/* Hero Section / Editorial Header */}
         <section className="mb-20 ml-0 md:ml-20 max-w-3xl">

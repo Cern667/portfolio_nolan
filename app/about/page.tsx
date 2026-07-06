@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-primary-black text-primary-white selection:bg-primary-kaliRed/20 selection:text-primary-kaliRed pt-24">
+    <div className="min-h-screen bg-transparent text-primary-white selection:bg-primary-kaliRed/20 selection:text-primary-kaliRed pt-24">
       <main className="max-w-screen-2xl mx-auto px-8 py-16">
         {/* Hero Section */}
         <header className="mb-32">
